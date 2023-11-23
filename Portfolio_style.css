@@ -1,0 +1,190 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container section */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Body section */
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to bottom, #000000, #ffffff );
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header section */
+header {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Nav section */
+nav {
+    text-align: right; /* Align navigation to the right */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 1rem; /* Adjust margin to add spacing between items */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Nav links section */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Main content sections */
+section {
+    display: flex; /* Use flexbox for section content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    padding: 0rem 1rem;
+    flex: 1;
+    margin: 0;
+}
+
+/* Resume content section */
+.resume-content {
+    padding: 20px; /* Add padding for spacing */
+    border: 1px solid #ddd; /* Add a border for separation */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.resume-content h3 {
+    font-size: 1.2rem; /* Increase the font size for headings */
+    margin-bottom: 10px; /* Add margin above headings */
+    margin-top: 10px; /* Add margin below headings */
+}
+
+.resume-content p {
+    font-size: 1rem; /* Set the font size for paragraphs */
+    margin-bottom: 10px; /* Add margin below paragraphs */
+}
+
+.resume-content a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.resume-content a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+}
+
+/* Job section */
+.job {
+    margin-bottom: 20px; /* Add space between job entries */
+}
+
+.job strong {
+    font-size: 1.2rem; /* Make company name bold and slightly larger */
+    color: #333; /* Set the color of the company name */
+}
+
+.job p {
+    font-size: 1rem; /* Set font size for dates and job title */
+    margin-bottom: 5px; /* Add space between paragraphs */
+}
+
+.job ul {
+    list-style-type: disc; /* Use bullets for the list items */
+    margin-left: 20px; /* Indent the list items */
+}
+
+.job li {
+    font-size: 0.9rem; /* Set font size for job description bullet points */
+    margin-bottom: 5px; /* Add space between bullet points */
+}
+
+/* Page section */
+.page {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Page active section */
+.page.active {
+    display: flex;
+    animation: slideIn 0.5s ease-in-out; /* Add a slide-in animation */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+
+/* Contact section */
+.contact-content {
+    text-align: left;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
