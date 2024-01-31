@@ -93,59 +93,6 @@ section {
     margin: 0;
 }
 
-/* Resume content section */
-.resume-content {
-    padding: 20px; /* Add padding for spacing */
-    border: 1px solid #ADD8E6; /* Add a border for separation */
-    border-radius: 5px; /* Add rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-}
-
-.resume-content h3 {
-    font-size: 1.2rem; /* Increase the font size for headings */
-    margin-bottom: 10px; /* Add margin above headings */
-    margin-top: 10px; /* Add margin below headings */
-}
-
-.resume-content p {
-    font-size: 1rem; /* Set the font size for paragraphs */
-    margin-bottom: 10px; /* Add margin below paragraphs */
-}
-
-.resume-content a {
-    color: #007bff; /* Link color */
-    text-decoration: none; /* Remove underlines from links */
-}
-
-.resume-content a:hover {
-    text-decoration: underline; /* Add underline on hover for links */
-}
-
-/* Job section */
-.job {
-    margin-bottom: 20px; /* Add space between job entries */
-}
-
-.job strong {
-    font-size: 1.2rem; /* Make company name bold and slightly larger */
-    color: #333; /* Set the color of the company name */
-}
-
-.job p {
-    font-size: 1rem; /* Set font size for dates and job title */
-    margin-bottom: 5px; /* Add space between paragraphs */
-}
-
-.job ul {
-    list-style-type: disc; /* Use bullets for the list items */
-    margin-left: 20px; /* Indent the list items */
-}
-
-.job li {
-    font-size: 0.9rem; /* Set font size for job description bullet points */
-    margin-bottom: 5px; /* Add space between bullet points */
-}
-
 /* Page section */
 .page {
     display: none;
@@ -162,7 +109,6 @@ section {
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
 }
-
 
 /* Contact section */
 .contact-content {
