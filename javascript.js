@@ -27,15 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Check if the link is an internal link (starts with #)
             if (link.getAttribute('href').startsWith('#')) {
                 e.preventDefault(); // Prevent the default behavior of link clicks
-        
                 // Get the target section ID from the link's 'href' attribute
                 const targetId = link.getAttribute('href').substring(1);
-        
                 // Hide all sections
                 sections.forEach(section => {
                     section.classList.remove('active');
                 });
-        
                 // Show the target section
                 const targetSection = document.getElementById(targetId);
                 targetSection.classList.add('active');
@@ -44,14 +41,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Get the mobile menu icon
-    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    // Dynamically change the name to "AZC" on mobile screens
+    function updateName() {
+        const nameElement = document.querySelector('header h1');
+        if (window.innerWidth <= 768) {
+            nameElement.textContent = "AZC";
+        } else {
+            nameElement.textContent = "Adrian Zhu Chou";
+        }
+    }
 
-    // Get the navigation links container
-    const navLinksContainer = document.querySelector('nav');
+    // Initial call to update the name based on screen width
+    updateName();
 
-    // Toggle menu visibility when the mobile menu icon is clicked
-    mobileMenuIcon.addEventListener('click', function () {
-        navLinksContainer.classList.toggle('active');
-    });
+    // Listen for window resize events to update the name dynamically
+    window.addEventListener('resize', updateName);
 });
