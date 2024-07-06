@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Get the navigation links
     const navLinks = document.querySelectorAll('nav a, header h1 a');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const closeBtn = document.querySelector('.close-btn');
 
     // Get all sections with class 'page'
     const sections = document.querySelectorAll('.page');
@@ -39,6 +43,32 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             // For external links, allow the default behavior
         });
+    });
+
+    // Add a click event listener to each mobile navigation link
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (link.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                const targetSection = document.getElementById(targetId);
+                targetSection.classList.add('active');
+                mobileNav.classList.remove('show'); // Hide mobile nav after selection
+            }
+        });
+    });
+
+    // Add a click event listener to the mobile menu icon
+    mobileMenuIcon.addEventListener('click', function () {
+        mobileNav.classList.toggle('show');
+    });
+
+    // Add a click event listener to the close button
+    closeBtn.addEventListener('click', function () {
+        mobileNav.classList.remove('show');
     });
 
     // Dynamically change the name to "AZC" on mobile screens
