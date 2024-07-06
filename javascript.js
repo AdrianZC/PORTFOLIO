@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Get the navigation links
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a, header h1 a');
 
     // Get all sections with class 'page'
     const sections = document.querySelectorAll('.page');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Dynamically change the name to "AZC" on mobile screens
     function updateName() {
-        const nameElement = document.querySelector('header h1');
+        const nameElement = document.querySelector('header h1 a');
         if (window.innerWidth <= 768) {
             nameElement.textContent = "AZC";
         } else {
