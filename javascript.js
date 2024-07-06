@@ -71,6 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileNav.classList.remove('show');
     });
 
+    // Close mobile nav if click happens outside of it
+    document.addEventListener('click', function (e) {
+        if (!mobileNav.contains(e.target) && !mobileMenuIcon.contains(e.target)) {
+            mobileNav.classList.remove('show');
+        }
+    });
+
     // Dynamically change the name to "AZC" on mobile screens
     function updateName() {
         const nameElement = document.querySelector('header h1 a');

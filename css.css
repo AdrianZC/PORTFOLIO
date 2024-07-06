@@ -112,19 +112,19 @@ nav a {
     position: fixed;
     top: 0;
     right: 0;
-    width: 70%; /* Adjust width as needed */
+    width: 70%; 
     height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Set transparency here */
+    background: linear-gradient(to bottom, #ADD8E6, #ffffff); 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000; 
 }
 
 .mobile-nav.show {
     transform: translateX(0);
-    display: flex; /* Make sure it is visible */
-    flex-direction: column; /* Ensure flex direction */
+    display: flex; 
+    flex-direction: column; 
 }
 
 .mobile-nav ul {
@@ -134,7 +134,7 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 60px; /* Space for header */
+    padding-top: 0px; 
 }
 
 .mobile-nav ul li {
@@ -148,7 +148,7 @@ nav a {
     padding: 15px 20px;
     text-decoration: none;
     color: #000;
-    font-size: 1.2rem; /* Adjust as needed */
+    font-size: 1.2rem;
     border-bottom: 1px solid #ddd;
 }
 
@@ -157,7 +157,8 @@ nav a {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.8); /* Set transparency here */
+    background: #ADD8E6; 
+    border-bottom: 1px solid #ddd
 }
 
 .close-btn {
